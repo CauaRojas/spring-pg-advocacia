@@ -37,8 +37,8 @@ public class Processo {
     private Advogado advogado;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "ADV_TIPO_DE_ACAO_PROCESSO",
-            referencedColumnName = "ADV_ID_TIPO_DE_ACAO",
+    @JoinColumn(name = "TIPO_DE_ACAO_PROCESSO",
+            referencedColumnName = "ID_TIPO_DE_ACAO",
             foreignKey = @ForeignKey(name = "FK_PROCESSO_TIPO_DE_ACAO")
     )
     private TipoDeAcao tipoDeAcao;

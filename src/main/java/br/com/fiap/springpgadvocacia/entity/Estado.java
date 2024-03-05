@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "TB_ADV_ESTADO")
 public class Estado {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ADV_ESTADO")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ESTADO")
     @SequenceGenerator(
             name = "SQ_ESTADO",
-            sequenceName = "ADV_ESTADO",
+            sequenceName = "SQ_ESTADO",
             allocationSize = 1
     )
     @Column(name = "ID_ESTADO")
