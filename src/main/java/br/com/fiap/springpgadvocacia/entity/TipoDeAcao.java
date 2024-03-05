@@ -14,15 +14,15 @@ import lombok.NoArgsConstructor;
 @Table(name = "TB_ADV_TIPO_DE_ACAO")
 public class TipoDeAcao {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ADV_TIPO_DE_ACAO")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_TIPO_DE_ACAO")
     @SequenceGenerator(
-            name = "SQ_ADV_TIPO_DE_ACAO",
-            sequenceName = "SQ_ADV_TIPO_DE_ACAO",
+            name = "SQ_TIPO_DE_ACAO",
+            sequenceName = "SQ_TIPO_DE_ACAO",
             allocationSize = 1
     )
-    @Column(name = "ADV_ID_TIPO_DE_ACAO")
+    @Column(name = "ID_TIPO_DE_ACAO")
     private Long id;
-    @Column(name = "ADV_NOME_TIPO_DE_ACAO")
+    @Column(name = "NOME_TIPO_DE_ACAO")
     private String nome;
 
 }

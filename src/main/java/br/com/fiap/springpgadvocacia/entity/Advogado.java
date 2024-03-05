@@ -14,21 +14,21 @@ import lombok.NoArgsConstructor;
 @Table(name = "TB_ADV_ADVOGADO")
 public class Advogado {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ADV_ADVOGADO")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_ADVOGADO")
     @SequenceGenerator(
-            name = "SQ_ADV_ADVOGADO",
-            sequenceName = "SQ_ADV_ADVOGADO",
+            name = "SQ_ADVOGADO",
+            sequenceName = "SQ_ADVOGADO",
             allocationSize = 1
     )
-    @Column(name = "ADV_ID_ADVOGADO")
+    @Column(name = "ID_ADVOGADO")
     private Long id;
-    @Column(name = "ADV_NOME_ADVOGADO")
+    @Column(name = "NOME_ADVOGADO")
     private String nome;
-    @Column(name = "ADV_NUMERO_OAB")
+    @Column(name = "NUMERO_OAB_ADVOGADO")
     private String numeroOAB;
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinColumn(name = "ADV_ESTADO_ADVOGADO",
-            referencedColumnName = "ADV_ID_ESTADO",
+    @JoinColumn(name = "ESTADO_ADVOGADO",
+            referencedColumnName = "ID_ESTADO",
             foreignKey = @ForeignKey(name = "FK_ADVOGADO_ESTADO")
     )
     private Estado estado;
