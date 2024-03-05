@@ -32,7 +32,7 @@ public class ProcessoResource {
     }
     @PostMapping
     @Transactional
-    public ResponseEntity<Processo> persist(Processo processo) {
+    public ResponseEntity<Processo> persist(@RequestBody Processo processo) {
         Processo saved = repository.save(processo);
         return ResponseEntity.ok(saved);
     }
